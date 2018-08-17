@@ -4,11 +4,11 @@ from datetime import datetime
 import sqlite3
 
 #source
-url="http://rate.bot.com.tw/xrt?Lang=zh-TW"
+url="https://rate.bot.com.tw/xrt?Lang=zh-TW"
 
 #讀取網頁
 dfs=pd.read_html(url)
-currency=dfs[0]
+currency = dfs[0]
 #檢查
 type(currency)
 
@@ -24,7 +24,6 @@ currency_fix['幣別']=currency_fix['幣別'].str.extract('\((\w+)\)')
 
 #檢查
 print(currency_fix)
-
 
 #存檔成excel
 # currency_fix.to_excel('currency.xlsx')
