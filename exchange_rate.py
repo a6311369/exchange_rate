@@ -27,3 +27,4 @@ print(currency_fix)
 #存檔成excel
 # currency_fix.to_excel('currency.xlsx')
 #currency_fix.to_csv('currency.csv')
+
