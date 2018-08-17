@@ -24,7 +24,7 @@ currency_fix['幣別']=currency_fix['幣別'].str.extract('\((\w+)\)')
 
 #檢查
 print(currency_fix)
-currency_fix
+
 
 #存檔成excel
 # currency_fix.to_excel('currency.xlsx')
