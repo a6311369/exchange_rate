@@ -21,6 +21,7 @@ currency_fix.columns=['幣別','現金匯率買入','現金匯率賣出','即期
 
 #清除幣別欄重複字元
 currency_fix['幣別']=currency_fix['幣別'].str.extract('\((\w+)\)')
+# currency_fix['幣別']=currency_fix['幣別'].str.extract('\((\w+)\)')
 
 #檢查
 print(currency_fix)
