@@ -1,4 +1,5 @@
 import pandas as pd
+import openpyxl
 from datetime import datetime
 import sqlite3
 
@@ -16,13 +17,14 @@ type(currency)
 currency_fix=currency.iloc[:,0:5]
 
 #自訂欄位名稱
-currency_fix.columns=[u'幣別',u'現金匯率-本行買入',u'現金匯率-本行賣出',u'即期匯率-本行買入',u'即期匯率-本行賣出']
+currency_fix.columns=['幣別','現金匯率買入','現金匯率賣出','即期匯率買入','即期匯率賣出']
 
 #清除幣別欄重複字元
-currency_fix[u'幣別']=currency_fix[u'幣別'].str.extract('\((\w+)\)')
+currency_fix['幣別']=currency_fix['幣別'].str.extract('\((\w+)\)')
 
 #檢查
 print(currency_fix)
+currency_fix
 
 #存檔成excel
 # currency_fix.to_excel('currency.xlsx')
